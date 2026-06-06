@@ -225,71 +225,6 @@ To serve the production build:
 npm run start
 ```
 
-## Important Notes Before Pushing to GitHub
-
-Do **not** push generated folders, virtual environments, local databases, or secret files.
-
-Add a `.gitignore` file like this:
-
-```gitignore
-# Python
-venv/
-.venv/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.sqlite3
-db.sqlite3
-
-# Django
-*.log
-local_settings.py
-.env
-
-# Node / Svelte
-node_modules/
-svelte-app/node_modules/
-svelte-app/public/build/
-npm-debug.log*
-
-# OS / Editor
-.DS_Store
-.vscode/
-.idea/
-```
-
-If these folders were already added to Git, remove them from tracking:
-
-```bash
-git rm -r --cached node_modules
-git rm -r --cached svelte-app/node_modules
-git rm -r --cached venv
-git rm -r --cached .venv
-git rm -r --cached djangods1/venv
-git rm --cached djangods1/db.sqlite3
-```
-
-Then commit again:
-
-```bash
-git add .
-git commit -m "Clean project and add README"
-git push
-```
-
-## Security Recommendations
-
-Before publishing the project publicly:
-
-- Replace the hardcoded Django `SECRET_KEY`.
-- Do not expose database passwords in `settings.py`.
-- Do not expose authentication tokens inside frontend code.
-- Set `DEBUG = False` in production.
-- Replace `ALLOWED_HOSTS = ['*']` with the real allowed domains.
-- Store sensitive values inside environment variables.
-- Use Django's built-in authentication system for secure password handling.
-
 ## Future Improvements
 
 - Add a real login system for clients
@@ -303,4 +238,5 @@ Before publishing the project publicly:
 
 ## Author
 
+Abdurrahmen Neji.
 Developed as a full-stack academic project using Django REST Framework and Svelte.

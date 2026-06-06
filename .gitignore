@@ -1,0 +1,25 @@
+# Python / Django
+__pycache__/
+*.py[cod]
+*.sqlite3
+db.sqlite3
+.env
+.env.*
+.venv/
+venv/
+media/
+staticfiles/
+
+# Node / Svelte
+node_modules/
+dist/
+build/
+.svelte-kit/
+npm-debug.log*
+yarn-error.log*
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
